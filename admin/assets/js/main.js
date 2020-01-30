@@ -1,7 +1,7 @@
 $(function () {
     // preload
     $(window).load(function() {
-        $('.preloader').fadeOut('slow');
+        $('.preloader').delay(2000).fadeOut('slow');
     });
     //sticky navbar
     $(window).on("scroll", function (e) {
