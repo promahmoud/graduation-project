@@ -1,5 +1,8 @@
 $(function () {
-
+    // preload
+    $(window).load(function() {
+        $('.preloader').fadeOut('slow');
+    });
     //sticky navbar
     $(window).on("scroll", function (e) {
         if ($(window).scrollTop() > 50) {
