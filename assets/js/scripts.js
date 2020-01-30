@@ -1,35 +1,40 @@
 /* Fundraising Grader
-*
-* Easing
-*/
-$(document).ready(function() {
+ *
+ * Easing
+ */
+$(document).ready(function () {
+    // preload
+    $(window).load(function () {
+        $('.preloader').delay(2000).fadeOut('slow');
+    });
+
     var current_fs, next_fs, previous_fs;
     var left, opacity, scale;
     var animating;
     $(".steps").validate({
         errorClass: 'invalid',
         errorElement: 'span',
-        errorPlacement: function(error, element) {
+        errorPlacement: function (error, element) {
             error.insertAfter(element.next('span').children());
         },
-        highlight: function(element) {
+        highlight: function (element) {
             $(element).next('span').show();
         },
-        unhighlight: function(element) {
+        unhighlight: function (element) {
             $(element).next('span').hide();
         }
     });
-    $(".next").click(function() {
+    $(".next").click(function () {
         $(".steps").validate({
             errorClass: 'invalid',
             errorElement: 'span',
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 error.insertAfter(element.next('span').children());
             },
-            highlight: function(element) {
+            highlight: function (element) {
                 $(element).next('span').show();
             },
-            unhighlight: function(element) {
+            unhighlight: function (element) {
                 $(element).next('span').hide();
             }
         });
@@ -45,7 +50,7 @@ $(document).ready(function() {
         current_fs.animate({
             opacity: 0
         }, {
-            step: function(now, mx) {
+            step: function (now, mx) {
                 scale = 1 - (1 - now) * 0.2;
                 left = (now * 50) + "%";
                 opacity = 1 - now;
@@ -58,24 +63,24 @@ $(document).ready(function() {
                 });
             },
             duration: 800,
-            complete: function() {
+            complete: function () {
                 current_fs.hide();
                 animating = false;
             },
             easing: 'easeInOutExpo'
         });
     });
-    $(".submit").click(function() {
+    $(".submit").click(function () {
         $(".steps").validate({
             errorClass: 'invalid',
             errorElement: 'span',
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 error.insertAfter(element.next('span').children());
             },
-            highlight: function(element) {
+            highlight: function (element) {
                 $(element).next('span').show();
             },
-            unhighlight: function(element) {
+            unhighlight: function (element) {
                 $(element).next('span').hide();
             }
         });
@@ -91,7 +96,7 @@ $(document).ready(function() {
         current_fs.animate({
             opacity: 0
         }, {
-            step: function(now, mx) {
+            step: function (now, mx) {
                 scale = 1 - (1 - now) * 0.2;
                 left = (now * 50) + "%";
                 opacity = 1 - now;
@@ -104,14 +109,14 @@ $(document).ready(function() {
                 });
             },
             duration: 800,
-            complete: function() {
+            complete: function () {
                 current_fs.hide();
                 animating = false;
             },
             easing: 'easeInOutExpo'
         });
     });
-    $(".previous").click(function() {
+    $(".previous").click(function () {
         if (animating) return false;
         animating = true;
         current_fs = $(this).parent();
@@ -121,7 +126,7 @@ $(document).ready(function() {
         current_fs.animate({
             opacity: 0
         }, {
-            step: function(now, mx) {
+            step: function (now, mx) {
                 scale = 0.8 + (1 - now) * 0.2;
                 left = ((1 - now) * 50) + "%";
                 opacity = 1 - now;
@@ -134,7 +139,7 @@ $(document).ready(function() {
                 });
             },
             duration: 800,
-            complete: function() {
+            complete: function () {
                 current_fs.hide();
                 animating = false;
             },
@@ -149,8 +154,8 @@ var modules = {
     $html: $('html'),
     $body: $('body'),
     $container: $('.container'),
-    init: function() {
-        $(function() {
+    init: function () {
+        $(function () {
             modules.modals.init();
         });
     },
@@ -158,35 +163,35 @@ var modules = {
         trigger: $('.explanation'),
         modal: $('.modal'),
         scrollTopPosition: null,
-        init: function() {
+        init: function () {
             var self = this;
             if (self.trigger.length > 0 && self.modal.length > 0) {
                 modules.$body.append('<div class="modal-overlay"></div>');
                 self.triggers();
             }
         },
-        triggers: function() {
+        triggers: function () {
             var self = this;
-            self.trigger.on('click', function(e) {
+            self.trigger.on('click', function (e) {
                 e.preventDefault();
                 var $trigger = $(this);
                 self.openModal($trigger, $trigger.data('modalId'));
             });
-            $('.modal-overlay').on('click', function(e) {
+            $('.modal-overlay').on('click', function (e) {
                 e.preventDefault();
                 self.closeModal();
             });
-            modules.$body.on('keydown', function(e) {
+            modules.$body.on('keydown', function (e) {
                 if (e.keyCode === 27) {
                     self.closeModal();
                 }
             });
-            $('.modal-close').on('click', function(e) {
+            $('.modal-close').on('click', function (e) {
                 e.preventDefault();
                 self.closeModal();
             });
         },
-        openModal: function(_trigger, _modalId) {
+        openModal: function (_trigger, _modalId) {
             var self = this,
                 scrollTopPosition = modules.$window.scrollTop(),
                 $targetModal = $('#' + _modalId);
@@ -195,7 +200,7 @@ var modules = {
             $targetModal.addClass('modal-show');
             modules.$container.scrollTop(scrollTopPosition);
         },
-        closeModal: function() {
+        closeModal: function () {
             var self = this;
             $('.modal-show').removeClass('modal-show');
             modules.$html.removeClass('modal-show').removeAttr('data-modal-effect');
@@ -205,45 +210,44 @@ var modules = {
 }
 modules.init();
 
-$(".imgAdd").click(function(){
-  $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-2 imgUp"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del"></i></div>');
+$(".imgAdd").click(function () {
+    $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-2 imgUp"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del"></i></div>');
 });
-$(document).on("click", "i.del" , function() {
-	$(this).parent().remove();
+$(document).on("click", "i.del", function () {
+    $(this).parent().remove();
 });
-$(function() {
-    $(document).on("change",".uploadFile", function()
-    {
-    		var uploadFile = $(this);
+$(function () {
+    $(document).on("change", ".uploadFile", function () {
+        var uploadFile = $(this);
         var files = !!this.files ? this.files : [];
         if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
- 
-        if (/^image/.test( files[0].type)){ // only image file
+
+        if (/^image/.test(files[0].type)) { // only image file
             var reader = new FileReader(); // instance of the FileReader
             reader.readAsDataURL(files[0]); // read the local file
- 
-            reader.onloadend = function(){ // set image data as background of div
+
+            reader.onloadend = function () { // set image data as background of div
                 //alert(uploadFile.closest(".upimage").find('.imagePreview').length);
-uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url("+this.result+")");
+                uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url(" + this.result + ")");
             }
         }
-      
+
     });
 });
 /*
-*** Upload image
-*/
+ *** Upload image
+ */
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function(e) {
-            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+        reader.onload = function (e) {
+            $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview').hide();
             $('#imagePreview').fadeIn(650);
         }
         reader.readAsDataURL(input.files[0]);
     }
 }
-$("#imageUpload").change(function() {
+$("#imageUpload").change(function () {
     readURL(this);
 });
