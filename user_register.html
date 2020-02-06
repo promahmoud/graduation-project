@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Af7sny | User Register</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/forms.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <section class="content">
+    <div class="overlay overlay-bg"></div>
+    <header id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
+                        <a href="index.html"><img src="images/logo3.jpg" alt="" title=""></a>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
+                        <a href="doctor_register.html">Join Us As Doctor</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Modal -info -->
+    <div class="container">
+        <div id="modal-3" class="modal" data-modal-effect="slide-top">
+            <div class="modal-content">
+                <h2 class="fs-title">Score Index</h2>
+                <h3 class="fs-subtitle">Getting the most out of your data</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi
+                    dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit,
+                    a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc
+                    ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel
+                    mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum.
+                    Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna
+                    dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod
+                    purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+                <input type="button" name="next" class="next action-button modal-close" value="Got it!">
+            </div>
+        </div>
+
+        <form class="steps" accept-charset="UTF-8" enctype="multipart/form-data" novalidate="">
+            <ul id="progressbar">
+                <li class="active">User Information</li>
+                <li>Aquisition</li>
+                <li>Retention</li>
+            </ul>
+
+
+
+            <!-- USER INFORMATION FIELD SET -->
+            <fieldset>
+                <h2 class="fs-title">Basic Information</h2>
+                <h3 class="fs-subtitle">We just need some basic information to begin your scoring</h3>
+                <!-- Begin What's Your First Name Field -->
+                <div class="hs_firstname field hs-form-field">
+
+                    <label for="name">Name *</label>
+
+                    <input id="name" name="name" required="required" type="text" value="" placeholder="First Name & Last Name"
+                        data-rule-required="true" data-msg-required="Please include your name">
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                    
+                </div>
+                <!-- End What's Your First Name Field -->
+
+
+                <!-- Begin What's Your Email Field -->
+                <div class="hs_email field hs-form-field">
+
+                    <label for="email">E-mail Address? *</label>
+
+                    <input id="email" name="email" required="required" type="email" value="" placeholder="xyz@gmail.com"
+                        data-rule-required="true" data-msg-required="Please enter a valid email address.">
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+                <!-- End What's Your Email Field -->
+                <!-- Begin What's Your password -->
+                <div class="hs_password field hs-form-field">
+
+                    <label for="lastname">Password*</label>
+
+                    <input id="password" name="password" required="required" type="password" value="" placeholder="Password"
+                        data-rule-required="true" data-msg-required="Please include your password">
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+            <!-- End What's Your password -->
+
+
+                <input type="button" data-page="1" name="next" class="next action-button" value="Next" />
+                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3"><i
+                        class="question-log fa fa-question-circle"></i> What Is This?</div>
+            </fieldset>
+
+
+
+            <!-- National ID and Gender and your Phon -->
+            <fieldset>
+                <h2 class="fs-title">National ID and Gender and your Phone</h2>
+                <h3 class="fs-subtitle">Required </h3>
+                <!-- Begin national ID  -->
+                <div class="form-item webform-component webform-component-textfield  hs-form-field">
+
+                    <label for="NID">National ID: *</label>
+
+                    <input id="NID" class="form-text hs-input" name="NID" required="required" size="14" maxlength="14"
+                        minlength="14" type="text" value="" placeholder="" data-rule-required="true"
+                        data-msg-required="Please enter a valid number">
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+                <!-- End National ID -->
+
+                <!-- Begin the gender / phone  -->
+                <div class="form-item webform-component webform-component-textfield  hs-form-field">
+
+                    <label for="male">Gender: *</label>
+                    <!-- <br> -->
+                    <div class="lab">
+                        <input type='radio' id='male' name='gender' value="male" required>
+                        <span class="error1" style="display: none;">
+                            <i class="error-log fa fa-exclamation-triangle"></i>
+                        </span>
+                        <label class="label" for='male'>Male</label>
+                    </div>
+                    <div class="lab">
+                        <input type='radio' id='female' name='gender' value="female">
+                        <label class="label" for='female'>Female</label>
+                    </div>
+                </div>
+                <!-- End gender -->
+
+                <!-- Begin the phone nember -->
+                <div class="form-item webform-component webform-component-textfield  field hs-form-field">
+
+                    <label for="phone">Phone: *</label>
+
+                    <input id="phone" class="form-text hs-input" name="phone" size="11" maxlength="11" minlength="11"
+                        type="text" value="" placeholder="" required="required" data-rule-required="true"
+                        data-msg-required="Please enter a valid number">
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+                <!-- End the phone number -->
+                <input type="button" data-page="1" name="previous" class="previous action-button" value="Previous" />
+                <input type="button" data-page="3" name="next" class="next action-button" value="Next" />
+                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
+            </fieldset>
+
+
+            <!-- RETENTION FIELD SET -->
+            <fieldset>
+                <h2 class="fs-title">Birth date and your Photo</h2>
+                <h3 class="fs-subtitle">Optional</h3>
+                <!-- Begin Total Number of Donors Who Gave in Year 1 Field -->
+                <div class="form-item webform-component webform-component-textfield field hs-form-field"
+                    id="webform-component-retention--amount-1">
+
+                    <label for="birthdate">Birth Date: </label>
+
+                    <input id="birthdate" class="form-text hs-input" name="" required="required" type="date" value=""
+                        placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
+                </div>
+                <!-- End Birth date-->
+
+
+                <!-- Begin upload image -->
+                <div class="form-item webform-component webform-component-textfield"
+                    id="webform-component-retention--percent-change field hs-form-field">
+
+                    <label class="lead"> Upload Photo:</label>
+                    <div class="avatar-upload">
+                        <div class="avatar-edit">
+                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                            <label for="imageUpload"></label>
+                        </div>
+                        <div class="avatar-preview">
+                            <div id="imagePreview" style="background-image: url('./images/avatar-user.png');">
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="error1" style="display: none;">
+                        <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+
+                <!-- End Retention Rate Percent -->
+
+
+
+                <input type="button" data-page="3" name="previous" class="previous action-button" value="Previous" />
+                <input id="submit" class="hs-button primary large action-button next" type="submit" value="Submit">
+                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">It's on the way!</h2>
+                <h3 class="fs-subtitle">Thank you for trying out our marketing grader, please go check your email for
+                    your
+                    fundraising report card and some helpful tips to improve it!</h3>
+                <div class="explanation btn btn-small modal-trigger" data-modal-id="modal-3">What Is This?</div>
+            </fieldset>
+        </form>
+    </div>
+    <!----End container--->
+    </section> <!----End content--->
+    <!-- preloader -->
+    <section class="preloader">
+        <div class="loader">
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+            <div class="inner one"></div>
+        </div>
+    </section>
+    
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2  col-md-6">
+                    <div class="single-footer-widget">
+                        <h6>Af7ny</h6>
+                        <ul class="footer-nav">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Hostpital</a></li>
+                            <li><a href="#">Doctores</a></li>
+                            <li><a href="#">Our Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Contact Us</h6>
+                        <p>
+                            El minia - Egypt
+                        </p>
+                        <h3>01256889746</h3>
+                    </div>
+                </div>
+                <div class="col-lg-6  col-md-12">
+                    <div class="single-footer-widget newsletter">
+                        <h6>Find Us</h6>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56314.88410013159!2d30.71570153683753!3d28.095294472312904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b2501ca8ed45f%3A0x1682970743a18080!2sMinya%2C%20Qism%20Minya%2C%20Minya%2C%20Menia%20Governorate!5e0!3m2!1sen!2seg!4v1580997095148!5m2!1sen!2seg" width="400" height="100" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        <div id="mc_embed_signup">
+                            <!-- <img src="images/logo2.png" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0">
+                    Copyright ©
+                    <script type="text/javascript" async=""
+                        src="https://www.google-analytics.com/analytics.js"></script>
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script> All rights reserved | <i class="fa fa-heart-o"
+                        aria-hidden="true"></i> by <a href="index.html">Af7sny</a>
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+    <script src="./assets/js/forms.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
