@@ -99,9 +99,5 @@ $(document).ready(function() {
             $('#header').removeClass('header-scrolled');
         }
     });
-   
-   
-    $(document).ready(function() {
-        $('#mc_embed_signup').find('form').ajaxChimp();
-    });
+
 });
